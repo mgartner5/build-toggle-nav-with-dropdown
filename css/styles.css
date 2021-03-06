@@ -1,1 +1,53 @@
 /* developer styles goes here */
+body {
+    background: linear-gradient(#ff69b4, #ffba00);
+    font-family: 'Nunito', sans-serif;
+    color: #00263e;
+}
+
+.container {
+    padding: 1rem; 
+}
+
+/* Typography */
+h1 a{
+    color: #00263e;
+    text-decoration: none;
+}
+
+h1 {
+    letter-spacing: 5px;
+}
+
+h1::first-letter {
+    color: #ff69b4;
+}
+
+h2 {
+    font-size: 3rem;
+    color: #fff;
+    text-align: center;
+}
+
+/* Header */
+header {
+    background-color: #fff;
+}
+
+.menu-icon {
+    width: 40px;
+    text-align: center;
+}
+
+header .flex-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media only screen and (min-width: 1300px) {
+    .container {
+        padding: 1rem 0;
+        max-width: 75rem;
+        margin: 0 auto;
+    }
+}
