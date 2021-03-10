@@ -7,6 +7,7 @@ body {
 
 .container {
     padding: 1rem; 
+    position: relative;
 }
 
 /* Typography */
@@ -44,10 +45,110 @@ header .flex-container {
     justify-content: space-between;
 }
 
+header a svg {
+    width: 15px;
+    height: 15px;
+}
+
+.main-menu li:last-of-type {
+    border-bottom: none;
+}
+
+.main-menu a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #f89d70;
+    font-weight: 700;
+    display: block;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+}
+
+.main-menu a:hover,
+.main-menu a:active {
+    background-color: #e3eaf3;
+    border-radius: 5px;
+}
+
+
+.main-menu li {
+    line-height: 85px;
+    margin: 0 25px;
+    border-bottom: 1px solid #e3eaf3;
+}
+
+.dropdown-menu a {
+    color: #00263e;
+    font-weight: 400;
+    text-transform: none;
+}
+
+.main-menu svg:last-of-type {
+    margin-left: auto;
+}
+
+.main-menu svg:first-of-type {
+    margin-right: 10px;
+}
+
+.dropdown-menu {
+    max-height: 0;
+    overflow: hidden;    
+}
+
+.main-menu li:hover > .dropdown-menu {
+    max-height: initial;
+}
+
+/* hide / show main menu with toggle icon */
+nav {
+    max-height: 0;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    background-color: #fff;
+    width: 100vw;
+    transition: all 0.6s ease;
+}
+
+.show-nav {
+    max-height: initial;
+}
+
 @media only screen and (min-width: 1300px) {
     .container {
         padding: 1rem 0;
-        max-width: 75rem;
+        max-width: 80rem;
         margin: 0 auto;
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    nav {
+        position: relative;
+        width: initial;
+        max-height: initial;
+    }
+
+    .main-menu > li {
+        display: inline-block;
+        width: auto;
+        border: none;
+    }
+
+    .main-menu {
+        display: relative;
+    }
+
+    .menu-icon {
+        display: none;        
+    }
+
+    .dropdown-menu {
+        display: absolute;
     }
 }
